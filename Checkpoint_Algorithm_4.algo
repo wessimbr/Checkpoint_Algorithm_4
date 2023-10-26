@@ -1,0 +1,45 @@
+ALGORITHM Algorithm_4_Palindrome
+VAR
+    Word: STRING
+    Left , Right : INTEGER 
+    palindrome : BOOLEAN := TRUE
+
+BEGIN
+    write("Write a word")
+    read(Word)
+    
+    Left := 1
+    Right := (Length.word)
+
+
+    IF (Length.Word <= 1 ) THEN
+    palindrome = TRUE
+    END_IF
+
+    
+    WHILE ( (Left < Right) AND (palindrome == TRUE) ) DO  //Start a loop to check for a palindrome
+        
+        IF (word[Left] = word[Right])  THEN
+            palindrome = TRUE        
+        ELSE
+            palindrome = FALSE
+        END_IF
+
+        Left:=Left+1    //Move the 'Left' index to the right
+        Right:=Right-1  //Move the 'Right' index to the left
+
+    END_WHILE
+
+    IF (palindrome == TRUE) 
+
+    THEN Write("The word is a palindrome")
+    ELSE Write("The word is not a palindrome")
+
+    END_IF
+
+ 
+
+END 
+
+
+
